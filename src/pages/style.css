@@ -1,0 +1,244 @@
+body {
+    padding: 25px;
+    background-color: #f8f8f8;
+}
+body::-webkit-scrollbar { display: none; }
+
+/* Container */
+.cont {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+
+    margin: 0px auto 16px;
+    max-width: 600px;
+
+    box-shadow: 0px 0px 29px rgb(0 0 0 / 12%);
+
+    margin-bottom: 16px;
+}
+
+/* News */
+.post {
+    background: #fff;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 0px auto 16px;
+    cursor: pointer;
+
+    box-shadow: 0px 0px 29px rgba(0, 0, 0, 0.12);
+}
+
+.post_img {
+    height: 25vh;
+    background: center center / 110% no-repeat rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 15px 15px 0px 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.post_inner {
+    padding: 20px;
+}
+
+.post_text {
+    margin: 0px;
+    white-space: pre-wrap;
+}
+
+/* Hw Calendar */
+.cal_root {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    gap: 10px;
+
+    margin: 0px auto 16px;
+    max-width: 600px;
+
+    box-shadow: 0px 0px 29px rgb(0 0 0 / 12%);
+
+    margin-bottom: 15px;
+}
+
+.cal_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 4px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    
+    width: 60px;
+    cursor: pointer;
+}
+
+.cal_btn#left_btn { background-image: url('../assets/gui/arrow_smal_l.svg'); }
+.cal_btn#right_btn { background-image: url('../assets/gui/arrow_smal_r.svg'); }
+
+.cal_counter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal_altday {
+    margin: 0px;
+}
+
+/* Hws */
+.invisible {
+    display: none;
+}
+
+.hw_post {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    position: relative;
+
+    margin: 0px auto 16px;
+    max-width: 600px;
+
+    box-shadow: 0px 0px 29px rgb(0 0 0 / 12%);
+}
+
+.hw_post.invisible { display: none; }
+
+.post_ic {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.hw_post_subject {
+    margin-bottom: 6px;
+}
+
+.hw_post_task {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.hw_checkbox {
+    position: absolute;
+    top: -4.5px;
+    right: -4.5px;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    font: inherit;
+    color: currentcolor;
+    width: 1.25em;
+    height: 1.25em;
+    border: 0.13em solid rgb(167, 167, 167);
+    border-radius: 25px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.hw_checkbox::before {
+    content: "";
+    background-color: rgb(33, 150, 243);
+    border-radius: 90px;
+    width: 0.85em;
+    height: 0.85em;
+    transform: scale(0);
+    transition: transform 120ms ease-in-out 0s;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+.hw_checkbox:checked::before {
+    transform: scale(1);
+}
+
+/* My Class */
+.myClass {
+    background: #2196f3;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Account */
+.account_l {
+    padding: 20px;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    padding: 30px;
+}
+
+.profilePhoto {
+    clip-path: circle();
+    width: 30%;
+    aspect-ratio: 1 / 1;
+
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    background: #2196f3;
+    position: relative;
+    box-shadow: 0px 0px 15px rgb(33 150 243 / 15%);
+}
+
+.profileName { margin-bottom: 5px; }
+.profileRole { margin: 0; }
+
+.profileExitBtn {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    background: url('../assets/gui/exit.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
+
+/* BackSettings */
+*[coolimg] {
+    position: relative;
+}
+
+*[coolimg]::before {
+    content: '';
+    background-image: url('../assets/gui/settings_transparent.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+
+    width: 700px; height: 700px;
+    position: fixed;
+    top: -250px;
+    left: -250px;
+
+    animation-name: back-rotation;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
